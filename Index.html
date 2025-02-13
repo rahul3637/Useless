@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Most Useless Website Ever</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+            position: relative;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button, input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .moving-button {
+            position: absolute;
+            transition: top 0.2s, left 0.2s;
+        }
+        .premium-section {
+            margin-top: 20px;
+            padding: 15px;
+            background: gold;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+        .premium-button {
+            background: black;
+            color: white;
+        }
+        .useless-wisdom {
+            max-width: 300px;
+            padding: 10px;
+            background: lightblue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Most Useless Website Ever!</h1>
+        <p>You will waste your time, and you will love it.</p>
+        
+        <button class="moving-button" id="movingButton">Try Clicking Me!</button>
+        <button onclick="generateText()">Generate Useless Wisdom</button>
+        <div id="random-text" class="useless-wisdom"></div>
+
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-XXXXXX"
+            data-ad-slot="XXXXXX"
+            data-ad-format="auto"></ins>
+        
+        <div class="premium-section">
+            <h2>🔥 PREMIUM USERS ONLY 🔥</h2>
+            <p>Upgrade for exclusive useless features:</p>
+            <ul>
+                <li>👑 A VIP button that also does nothing!</li>
+                <li>✨ A golden background that blinds you!</li>
+                <li>💎 Access to 1,000,000 more useless quotes!</li>
+            </ul>
+            <button class="premium-button" onclick="becomePremium()">Upgrade to PRO ($9.99)</button>
+        </div>
+        
+        <a href="https://www.buymeacoffee.com/YOURUSERNAME" target="_blank">
+            <button style="background:orange;color:white;padding:10px;border:none;border-radius:5px;cursor:pointer;">
+                ☕ Buy Me a Coffee
+            </button>
+        </a>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            if (window.adsbygoogle) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const movingButton = document.getElementById('movingButton');
+            movingButton.addEventListener('mouseover', function() {
+                const newX = Math.random() * (window.innerWidth - 150);
+                const newY = Math.random() * (window.innerHeight - 50);
+                movingButton.style.left = `${newX}px`;
+                movingButton.style.top = `${newY}px`;
+            });
+        });
+
+        function generateText() {
+            const texts = [
+                "Why do we press harder on the remote when we know the battery is dead?",
+                "If two mind readers read each other’s minds, whose mind are they reading?",
+                "Bananas are just shoes for fruit bugs.",
+                "I tried to make my website useful, but then I realized life is meaningless.",
+                "If you’re waiting for the waiter, doesn’t that make you the waiter?",
+                ...Array.from({length: 100}, (_, i) => `Wisdom #${i+6}: Absolutely useless!`)
+            ];
+            document.getElementById('random-text').innerText = texts[Math.floor(Math.random() * texts.length)];
+        }
+
+        function becomePremium() {
+            window.location.href = "https://YOUR-GUMROAD-LINK";
+        }
+    </script>
+</body>
+</html>
